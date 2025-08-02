@@ -8,26 +8,36 @@
 </head>
 <body>
   <div id="game">
-    <h1>Howler</h1>
+    <h1>Typing Boss Battle</h1>
     
-    <div id="boss">
-      <p id="boss-name">Goblin Typelord</p>
-      <div id="boss-healthbar">
-        <div id="boss-health"></div>
+    <div id="boss-container">
+      <div id="boss-avatar">👹</div>
+      <div id="boss">
+        <p id="boss-name">Goblin Typelord</p>
+        <div id="boss-healthbar">
+          <div id="boss-health"></div>
+        </div>
       </div>
     </div>
     
     <div id="word-display">Loading...</div>
     
-    <input id="input" type="text" placeholder="Type here..." autocomplete="off" autofocus />
+    <div id="input-container">
+      <input id="input" type="text" placeholder="Type the word..." autocomplete="off" autofocus />
+      <div id="typing-indicator"></div>
+      <div id="combo">Combo x1</div>
+    </div>
     
     <div id="status">
-      <p>Boss HP: <span id="boss-hp-text">100</span></p>
-      <p>Score: <span id="score">0</span></p>
+      <div class="stat">Boss HP: <span id="boss-hp-text" class="stat-value">100</span></div>
+      <div class="stat">Score: <span id="score" class="stat-value">0</span></div>
+      <div class="stat">Combo: <span id="combo-count" class="stat-value">0</span></div>
     </div>
     
     <p id="feedback"></p>
+    <button id="next-boss">Fight Next Boss</button>
   </div>
+
   
   <script src="main.js"></script>
 </body>
